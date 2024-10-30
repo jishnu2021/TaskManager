@@ -47,8 +47,8 @@ function AddTaskPopup({ isOpen, onClose }) {
 
   return (
     <div>
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg h-auto max-h-screen" style={{ width: '30%' }}>
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" >
+        <div className="bg-white p-8 rounded-lg shadow-lg h-auto max-h-screen" style={{ width: '40%'}}>
           <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
           {error && <p className="text-red-500 mb-4">{error}</p>} {/* Display error message */}
           <form onSubmit={handleSubmit}>

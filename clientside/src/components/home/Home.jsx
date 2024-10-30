@@ -2,22 +2,21 @@ import React from 'react';
 import hero from '../../images/pic1.jpeg';
 
 function Home() {
-  // Check if the user is logged in (you can change this logic based on how you handle authentication)
   const isLoggedIn = localStorage.getItem('userToken'); // Assuming you store a token on login
 
   return (
     <div>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="lg:col-span-7 lg:pr-8" style={{ marginTop: '6rem' }}>
-            <div className="place-self-center lg:mt-10" style={{ marginTop: '-2rem' }}>
+      <section className="bg-white dark:bg-gray-900 min-h-screen flex items-center" style={{ padding: '5rem 0' ,paddingBottom:'10rem'}}>
+        <div className="grid max-w-screen-xl px-4 py-2 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12" >
+          <div className="lg:col-span-7 lg:pr-48 flex flex-col justify-center">
+            <div className="place-self-center lg:mt-10">
               <h3 style={{ fontFamily: '500', fontSize: '3rem' }} className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
                 Master Your Tasks with TaskMaster Pro – Stay Organized, Stay Ahead!
               </h3>
               <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                 A powerful task management tool designed to help you organize, prioritize, and track your tasks effortlessly. Whether you're working on personal projects or team collaborations, TaskMaster Pro keeps you focused and productive with seamless task creation, tracking, and completion features.
               </p>
-              {isLoggedIn ? ( // If the user is logged in
+              {isLoggedIn ? (
                 <div className="flex items-center">
                   <span className="mr-3 text-gray-700">View More</span>
                   <a
@@ -63,14 +62,13 @@ function Home() {
               )}
             </div>
           </div>
-          <div className="lg:col-span-5 lg:mt-8">
-            <div className="flex justify-center lg:justify-end" style={{ height: '120%', width: '100%' }}>
-              <img
-                src={hero}
-                alt="mockup"
-                className="max-w-full h-auto lg:max-h-full lg:max-w-none"
-              />
-            </div>
+          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
+            <img
+              src={hero}
+              alt="mockup"
+              className="max-w-full h-auto lg:max-h-full lg:max-w-none"
+              style={{ height: '100%', width: '100%' }}
+            />
           </div>
         </div>
       </section>
