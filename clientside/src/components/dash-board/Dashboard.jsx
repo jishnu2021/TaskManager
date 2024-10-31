@@ -16,7 +16,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await fetch('http://localhost:5000/alltasks'); // Fetch tasks for specific user
+        const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/alltasks`); // Fetch tasks for specific user
         if (!response.ok) {
           throw new Error('Failed to fetch tasks');
         }
@@ -35,7 +35,7 @@ function Dashboard() {
 const handleDelete = async (taskId) => {
   console.log("Task id",taskId)
   try {
-    const response = await fetch(`http://localhost:5000/tasks/${taskId}`, { // API endpoint for delete
+    const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/tasks/${taskId}`, { // API endpoint for delete
       method: 'DELETE',
     });
 

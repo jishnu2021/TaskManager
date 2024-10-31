@@ -16,7 +16,7 @@ function Login() {
     }
     
     try {
-        const response = await fetch('http://localhost:5000/loginuser', {
+        const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/loginuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

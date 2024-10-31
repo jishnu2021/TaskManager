@@ -24,7 +24,7 @@ function AddTaskPopup({ isOpen, onClose }) {
         priority,
       };
 
-      const response = await fetch('http://localhost:5000/tasks', { // Update the API endpoint as needed
+      const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/tasks`, { // Update the API endpoint as needed
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

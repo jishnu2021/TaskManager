@@ -18,7 +18,7 @@ function AdminRegister() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/adminregister', {
+      const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/adminregister`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

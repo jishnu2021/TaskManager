@@ -6,7 +6,7 @@ function IncompleteTask() {
   useEffect(() => {
     const fetchincompletetasks = async () => {
       try {
-        const response = await fetch('http://localhost:5000/tasks/incomplete'); // API for completed tasks
+        const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/tasks/incomplete`); // API for completed tasks
         if (!response.ok) {
           throw new Error('Failed to fetch completed tasks');
         }

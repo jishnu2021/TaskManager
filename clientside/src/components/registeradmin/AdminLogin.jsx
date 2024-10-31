@@ -16,7 +16,7 @@ function AdminLogin() {
     }
     
     try {
-        const response = await fetch('http://localhost:5000/adminlogin', {
+        const response = await fetch(`${import.meta.env.VITE_CLIENT_SIDE}/adminlogin`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
