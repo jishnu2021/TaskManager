@@ -10,7 +10,11 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URL = process.env.MONGODB_URL;
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+    origin: 'http://35.154.178.145:5173',
+    credentials: true,
+  }));
 
 mongoose.connect(MONGO_URL, {
         useNewUrlParser: true,
