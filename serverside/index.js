@@ -20,6 +20,11 @@ mongoose.connect(MONGO_URL, {
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Error connecting to MongoDB', err));
 
+// Root route handler
+app.get('/', (req, res) => {
+    res.send('Welcome to the Task Manager API!');
+});
+
 app.use('/', Routes);
 
 app.listen(PORT, () => {
